@@ -93,7 +93,6 @@ public class MainFragment extends Fragment {
 
         Resources res = getResources();
         mViewModel.initWordArray(res.getStringArray(R.array.guessWords));
-        // TODO Kolla detta
         mViewModel.initResultCharArray();
 
         ((MainActivity) getActivity()).setViewPager(1);

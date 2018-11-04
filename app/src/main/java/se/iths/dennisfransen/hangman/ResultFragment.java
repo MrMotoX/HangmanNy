@@ -3,6 +3,7 @@ package se.iths.dennisfransen.hangman;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -106,8 +107,11 @@ public class ResultFragment extends Fragment {
      * Activate PlayFragment
      */
     public void openPlayActivity() {
-        Intent intent = new Intent(getActivity(), PlayFragment.class);
-        startActivity(intent);
+        mViewModel.initTries();
+        Resources res = getResources();
+        mViewModel.initWordArray(res.getStringArray(R.array.guessWords));
+        mViewModel.initResultCharArray();
+        ((MainActivity) getActivity()).setViewPager(1);
     }
 
     /**
