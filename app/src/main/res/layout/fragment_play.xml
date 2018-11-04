@@ -13,12 +13,23 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backToolBarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/arrowback"
+            android:tint="@android:color/white"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="71dp"
+            android:contentDescription="@string/go_back_to_main_menu" />
+
 
         <ImageView
             android:id="@+id/gameIconImageView2"
@@ -57,7 +68,7 @@
 
     <Button
         android:id="@+id/guessButton"
-        android:layout_width="wrap_content"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
@@ -67,7 +78,7 @@
         android:theme="?attr/primaryButtonTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/inputEditText"
         app:layout_constraintTop_toBottomOf="@+id/outputTextView"
         app:layout_constraintVertical_bias="0.0" />
@@ -75,12 +86,12 @@
     <EditText
         android:id="@+id/inputEditText"
         android:layout_width="129dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="248dp"
         android:alpha="0.5"
-        android:autofillHints=""
         android:background="@android:color/background_dark"
         android:ems="10"
         android:hint="@string/inputTextView"
@@ -90,7 +101,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/outputTextView"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/outputTextView"
@@ -109,10 +120,11 @@
 
     <TextView
         android:id="@+id/triesLeftTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="129dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="4dp"
         android:text="@string/tries_left_text_view"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,5 +150,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/picture_frame" />
+
 
 </android.support.constraint.ConstraintLayout>

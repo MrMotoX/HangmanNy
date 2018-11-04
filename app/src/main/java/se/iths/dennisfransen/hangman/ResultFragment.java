@@ -31,8 +31,7 @@ public class ResultFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_result, container, false);
 
-        ImageButton playToolbarBtn;
-        ImageButton infoToolbarBtn;
+        ImageButton playToolbarBtn, infoToolbarBtn, goBackToolBarBtn;
 
         triesLeftResultTextView = view.findViewById(R.id.triesLeftResultTextView);
         resultTextView = view.findViewById(R.id.resultTextView);
@@ -67,14 +66,13 @@ public class ResultFragment extends Fragment {
             }
         });
 
-        ImageButton goBackBtn = view.findViewById(R.id.goBackBtn);
-        goBackBtn.setOnClickListener(new View.OnClickListener() {
+        goBackToolBarBtn = view.findViewById(R.id.backToolBarBtn);
+        goBackToolBarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openMainMenuActivity();
             }
         });
-
 
         playToolbarBtn = view.findViewById(R.id.playToolbarBtn);
         playToolbarBtn.setOnClickListener(new View.OnClickListener() {
@@ -120,4 +118,5 @@ public class ResultFragment extends Fragment {
     public void openMainMenuActivity() {
         ((MainActivity) getActivity()).setViewPager(0);
     }
+
 }

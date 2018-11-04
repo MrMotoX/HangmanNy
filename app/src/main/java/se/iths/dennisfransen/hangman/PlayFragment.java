@@ -3,9 +3,9 @@ package se.iths.dennisfransen.hangman;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -25,13 +25,12 @@ import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 
 import java.io.InputStream;
-import java.util.Random;
 
 public class PlayFragment extends Fragment {
 
     private EditText inputEditText;
     private TextView outputTextView, guessCharTextView, triesLeftTextView;
-    ImageButton infoToolbarBtn;
+    ImageButton infoToolbarBtn, goBackToolBarBtn;
     private ImageView img;
 
     private FragmentViewModel mViewModel;
@@ -47,7 +46,7 @@ public class PlayFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_play, container, false);
 
-        // TODO: Add back button on Toolbar
+
 
         // Initialize number of remaining tries and pictures
         img = view.findViewById(R.id.hangmanImageView);
@@ -92,7 +91,7 @@ public class PlayFragment extends Fragment {
                         //Output result
                         if (mViewModel.isDone()) {
                             // Game over. Guess complete or out of tries
-                            activateResultActivity();
+                            activateResultFragment();
                         }
                     }
                 } else {
@@ -103,6 +102,16 @@ public class PlayFragment extends Fragment {
         });
 
 
+        // onClick -> fragment_main
+        goBackToolBarBtn = view.findViewById(R.id.backToolBarBtn);
+        goBackToolBarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activateMainFragment();
+            }
+        });
+
+        // onClick -> activity_about
         infoToolbarBtn = view.findViewById(R.id.infoToolbarBtn);
         infoToolbarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,11 +169,16 @@ public class PlayFragment extends Fragment {
     /**
      * Activates ResultFragment with parameters
      */
-    public void activateResultActivity() {
-        // TODO Skicka data till ViewModel
+    public void activateResultFragment() {
         mViewModel.setChosenWord();
 
         ((MainActivity) getActivity()).setViewPager(2);
+    }
+
+    public void activateMainFragment() {
+        mViewModel.setChosenWord();
+
+        ((MainActivity) getActivity()).setViewPager(0);
     }
 
 }

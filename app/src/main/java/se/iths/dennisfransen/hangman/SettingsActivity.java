@@ -3,6 +3,7 @@ package se.iths.dennisfransen.hangman;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -11,12 +12,11 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        Utils.onActivityCreateSetTheme(this);
+        Theme.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_settings);
 
         findViewById(R.id.defaultThemeBtn).setOnClickListener(this);
         findViewById(R.id.halloweenThemeBtn).setOnClickListener(this);
-
     }
 
     @Override
@@ -24,13 +24,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.defaultThemeBtn:
-                Utils.changeToTheme(this, Utils.THEME_DEFAULT);
+                Theme.changeToTheme(this, Theme.THEME_DEFAULT);
                 break;
             case R.id.halloweenThemeBtn:
-                Utils.changeToTheme(this, Utils.THEME_HALLOWEEN);
+                Theme.changeToTheme(this, Theme.THEME_HALLOWEEN);
                 break;
         }
     }
+
 }
 
 

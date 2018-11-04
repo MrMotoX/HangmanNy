@@ -3,7 +3,7 @@ package se.iths.dennisfransen.hangman;
 import android.app.Activity;
 import android.content.Intent;
 
-class Utils {
+class Theme {
     private static int sTheme;
     public final static int THEME_DEFAULT = 0;
     public final static int THEME_HALLOWEEN = 1;

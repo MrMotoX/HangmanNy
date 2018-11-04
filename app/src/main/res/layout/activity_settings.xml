@@ -7,29 +7,18 @@
     android:background="@drawable/backgroud"
     tools:context=".SettingsActivity">
 
+
     <android.support.v7.widget.Toolbar
 
         android:id="@+id/settingsToolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/goBackBtn"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:contentDescription="@string/go_back_to_main_menu"
-            android:src="@drawable/arrowback"
-            android:tint="@android:color/white"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="68dp" />
 
         <ImageView
             android:id="@+id/gameIconImageView"
