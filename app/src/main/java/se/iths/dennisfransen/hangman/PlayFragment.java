@@ -4,10 +4,14 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +22,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
+import java.io.InputStream;
 import java.util.Random;
 
 public class PlayFragment extends Fragment {
@@ -44,7 +51,6 @@ public class PlayFragment extends Fragment {
 
         // Initialize number of remaining tries and pictures
         img = view.findViewById(R.id.hangmanImageView);
-        img.setImageResource(R.drawable.hang10);
 
         // Initialize output fields
         outputTextView = view.findViewById(R.id.outputTextView);
@@ -55,8 +61,7 @@ public class PlayFragment extends Fragment {
                 guessCharTextView.setText(mViewModel.getGuessedChars());
                 outputTextView.setText(mViewModel.getResultString());
                 triesLeftTextView.setText(String.format(getResources().getString(R.string.tries_left_text_view), mViewModel.getTriesInt()));
-                int pic = getImg(mViewModel.getTriesInt());
-                img.setImageResource(pic);
+                Picasso.get().load(getImg(mViewModel.getTriesInt())).into(img);
             }
         };
         mViewModel.getCycle().observe(this, resultObserver);
@@ -66,7 +71,6 @@ public class PlayFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-//                guessCharTextView = getView().findViewById(R.id.guessCharTextView);
                 inputEditText = getView().findViewById(R.id.inputEditText);
                 ImageView img = getView().findViewById(R.id.hangmanImageView);
 
@@ -124,32 +128,32 @@ public class PlayFragment extends Fragment {
      * @param index number of false guesses
      * @return an index to the image in drawable resources
      */
-    private int getImg(int index) {
-        switch (index) {
-            case 0:
-                return R.drawable.hang0;
-            case 1:
-                return R.drawable.hang1;
-            case 2:
-                return R.drawable.hang2;
-            case 3:
-                return R.drawable.hang3;
-            case 4:
-                return R.drawable.hang4;
-            case 5:
-                return R.drawable.hang5;
-            case 6:
-                return R.drawable.hang6;
-            case 7:
-                return R.drawable.hang7;
-            case 8:
-                return R.drawable.hang8;
-            case 9:
-                return R.drawable.hang9;
-            case 10:
-                return R.drawable.hang10;
-            default:
-                return -1;
+    private String getImg(int index) {
+        return "https://raw.githubusercontent.com/MrMotoX/Hangman_V2/master/app/src/main/res/drawable/hang" + index + ".gif";
+    }
+
+    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+        ImageView bmImage;
+
+        public DownloadImageTask(ImageView bmImage) {
+            this.bmImage = bmImage;
+        }
+
+        protected Bitmap doInBackground(String... urls) {
+            String urldisplay = urls[0];
+            Bitmap mIcon11 = null;
+            try {
+                InputStream in = new java.net.URL(urldisplay).openStream();
+                mIcon11 = BitmapFactory.decodeStream(in);
+            } catch (Exception e) {
+                Log.e("Error", e.getMessage());
+                e.printStackTrace();
+            }
+            return mIcon11;
+        }
+
+        protected void onPostExecute(Bitmap result) {
+            bmImage.setImageBitmap(result);
         }
     }
 
