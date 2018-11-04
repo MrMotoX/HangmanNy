@@ -129,7 +129,7 @@ public class PlayFragment extends Fragment {
      * @return an index to the image in drawable resources
      */
     private String getImg(int index) {
-        return "https://raw.githubusercontent.com/MrMotoX/Hangman_V2/master/app/src/main/res/drawable/hang" + index + ".gif";
+        return "https://raw.githubusercontent.com/dennisfransen/HangmanNy/master/app/src/main/res/drawable-v24/hang" + index + ".gif";
     }
 
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
