@@ -5,9 +5,9 @@
     <string name="aboutButton">About</string>
     <string name="aboutMeTextView">Made by: Dennis Fransén</string>
     <string name="toolBarTextView">Main menu</string>
-    <string name="opensAboutActivity">Opens AboutActivity</string>
+    <string name="opensAboutActivity" translatable="false">Opens AboutActivity</string>
     <string name="guessButton">Guess</string>
-    <string name="outputTextView">_ _ _ _ _ _ _</string>
+    <string name="outputTextView" translatable="false">_ _ _ _ _ _ _</string>
     <string name="inputTextView">Type here...</string>
     <string name="toManyCharErrorMsg">You typed to many characters. Please try again.</string>
     <string name="display_hangman_image" translatable="false">Display hangman image</string>

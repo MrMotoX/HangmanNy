@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hängagubben</string>
+    <string name="startButton">Start</string>
+    <string name="hangmanTheGame">Hängagubben</string>
+    <string name="aboutButton">Om</string>
+    <string name="aboutMeTextView">Skapad av: Dennis Fransén</string>
+    <string name="toolBarTextView">Huvudmenyn</string>
+    <string name="guessButton">Gissa</string>
+    <string name="inputTextView">Skriv här..</string>
+    <string name="toManyCharErrorMsg">Du skrev för många bokstäver. Försök igen!</string>
+    <string name="tries_left_text_view">%d försök kvar</string>
+    <string name="back_to_main_menu">Tillbaka till huvudmenyn</string>
+    <string name="result_word">Ordet var: %s</string>
+    <string name="tries_result">Försök kvar: %d</string>
+    <string name="you_won">Du vann!</string>
+    <string name="you_lost">Du förlorade!</string>
+    <string name="result">Resultat</string>
+    <string name="about">Om</string>
+    <string name="already_typed_letter">Du har redan gissat på den bokstaven!</string>
+    <string name="go_back_to_main_menu">Tillbaka till huvudmenyn</string>
+    <string name="settings">Inställningar</string>
+    <string name="switchEnableText">Aktivera Halloween temat</string>
+    <string name="prefs_theme_key">Tema</string>
+    <string name="default_theme">Standard temat</string>
+    <string name="halloween_theme">Halloween temat</string>
+</resources>
