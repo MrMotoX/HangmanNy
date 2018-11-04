@@ -26,16 +26,30 @@
     <string name="go_back_to_main_menu">Go back to main menu</string>
     <string name="settings">Settings</string>
     <string name="switchEnableText">Enable Halloween theme</string>
-
-    <string-array name="guessWords">
-        <item>"Awesome"</item>
-        <item>"Superman"</item>
-        <item>"Closer"</item>
-        <item>"Closed"</item>
-    </string-array>
-
     <string name="prefs_theme_key">theme</string>
     <string name="default_theme">Default Theme</string>
     <string name="halloween_theme">Halloween Theme</string>
 
+    <string-array name="guessWords">
+        <item>"awesome"</item>
+        <item>"ability"</item>
+        <item>"abortion"</item>
+        <item>"about"</item>
+        <item>"absolutely"</item>
+        <item>"barrel"</item>
+        <item>"basket"</item>
+        <item>"bathroom"</item>
+        <item>"beach"</item>
+        <item>"body"</item>
+        <item>"Closed"</item>
+        <item>"clear"</item>
+        <item>"classic"</item>
+        <item>"clock"</item>
+        <item>"coast"</item>
+        <item>"door"</item>
+        <item>"double"</item>
+        <item>"drama"</item>
+        <item>"dinner"</item>
+        <item>"dirty"</item>
+    </string-array>
 </resources>

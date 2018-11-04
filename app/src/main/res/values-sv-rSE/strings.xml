@@ -24,4 +24,27 @@
     <string name="prefs_theme_key">Tema</string>
     <string name="default_theme">Standard temat</string>
     <string name="halloween_theme">Halloween temat</string>
+
+    <string-array name="guessWords">
+        <item>"grym"</item>
+        <item>"kunskap"</item>
+        <item>"abort"</item>
+        <item>"om"</item>
+        <item>"absolut"</item>
+        <item>"tunna"</item>
+        <item>"basket"</item>
+        <item>"badrum"</item>
+        <item>"strand"</item>
+        <item>"kropp"</item>
+        <item>"stängd"</item>
+        <item>"klar"</item>
+        <item>"klassisk"</item>
+        <item>"klocka"</item>
+        <item>"kust"</item>
+        <item>"dörr"</item>
+        <item>"dubbel"</item>
+        <item>"drama"</item>
+        <item>"middag"</item>
+        <item>"smutsig"</item>
+    </string-array>
 </resources>
