@@ -1,10 +1,8 @@
-package com.example.rickard.testfragment;
+package se.iths.dennisfransen.hangman;
 
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-import se.iths.dennisfransen.hangman.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,14 +18,16 @@ public class MainActivity extends AppCompatActivity {
         setupViewPager(mViewPager);
     }
 
-    private void setupViewPager (ViewPager viewPager) {
+    private void setupViewPager(ViewPager viewPager) {
         PlayStatePagerAdapter adapter = new PlayStatePagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new MainFragment(), "MainFragment");
-        adapter.addFragment(new ThirdFragment(), "ThirdFragment");
+        adapter.addFragment(new PlayFragment(), "PlayFragment");
+        adapter.addFragment(new ResultFragment(), "ResultFragment");
         viewPager.setAdapter(adapter);
     }
 
     public void setViewPager(int fragmentNumber) {
         mViewPager.setCurrentItem(fragmentNumber);
     }
+
 }

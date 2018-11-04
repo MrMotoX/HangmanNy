@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#FF212121</color>
+    <color name="colorPrimaryDark">#FF000000</color>
+    <color name="colorAccent">#FF80CBC4</color>
+    <color name="primaryText">#FF303030</color>
+    <color name="buttonNormal">#FFFFFFFF</color>
+    <color name="buttonHighlight">#FFFFFF</color>
+    <color name="buttonText">#FFFFFF</color>
+
+    <color name="mintColorPrimary">#720d5d</color>
+    <color name="mintColorPrimaryDark">#430033</color>
+    <color name="mintColorAccent">#e30425</color>
+    <color name="mintPrimaryText">#000000</color>
+    <color name="mintButtonNormal">#e30425</color>
+    <color name="mintButtonHighlight">#ff554f</color>
+    <color name="mintButtonText">#FFFFFF</color>
+    <color name="mintIcon">#FFFFFF</color>
+    <color name="primary_material_dark_1">#212121</color>
+    <color name="primary_dark_material_dark_1">#000000</color>
 </resources>

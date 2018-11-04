@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import se.iths.dennisfransen.hangman.R;
+
 public class ThirdFragment extends Fragment {
 
     private MyViewModel mViewModel;

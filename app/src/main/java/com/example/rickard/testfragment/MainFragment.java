@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import se.iths.dennisfransen.hangman.R;
+
 /**
  * A simple {@link Fragment} subclass.
  */
